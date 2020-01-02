@@ -28,7 +28,7 @@ for pg in pgs:
     if pg != 'l=':
        r = requests.get('https://www.indeed.com/jobs?q=Marketing+research&start='+str(pg)+'0')
     else:
-        r = requests.get('https://www.indeed.com/jobs?q=Marketing+research&'+pg)     
+        r = requests.get('https://www.indeed.com/jobs?q=Marketing+research&'+str(pg))     
     
     soup = BeautifulSoup(r.content, "html5lib")
     info_block = soup.find_all("a", attrs={"class":"jobtitle turnstileLink"})
