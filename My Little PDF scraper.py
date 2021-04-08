@@ -10,5 +10,5 @@ tables = read_pdf(path, pages="all")
 # if the pdf is one table on one page,
 # tables becomes a Pandas dataframe;
 # if the pdf has many pages,
-# tables becomes a Python listy of dataframes
+# tables becomes a Python list of dataframes
 print(tabulate(tables[0]))
